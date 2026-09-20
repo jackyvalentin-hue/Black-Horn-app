@@ -1,13 +1,11 @@
-BLACK HORN V2.2 — MISE À JOUR CARTE
+BLACK HORN V2.2 — AJOUT DU NÉERLANDAIS
 
-Cette mise à jour ne change pas la version de l'application ni sa mise en page.
-Elle remplace uniquement le contenu de la carte par les informations des 6 pages fournies :
-- Entrées & Finger Food
-- Hamburgers
-- Plats principaux & viandes
-- Desserts
-- Milkshakes
-- Boissons
+Cette mise à jour ajoute le bouton NL à l'application.
+La Ribs Night du 26 septembre est disponible en néerlandais,
+ainsi que les principaux textes d'interface et les messages WhatsApp.
 
-À envoyer sur GitHub : index.html uniquement.
-Après déploiement, ouvrir le site dans Safari. Si l'ancienne carte reste affichée, ouvrir /reset.html une fois.
+À envoyer sur GitHub :
+- index.html
+- app-v22.js
+
+Ne remplace pas les autres fichiers.

@@ -64,18 +64,42 @@ const translations = {
     route:'Google Maps directions',socialTitle:'Follow us',coming:'Coming soon',loyalty:'Black Horn Loyalty',
     loyaltyText:'The digital loyalty card will be added in a future update.',
     home:'Home',findShort:'Address',bookShort:'Book'
+  },
+  nl:{
+    tagline:'Grill • Burgers • Thema-avonden',book:'Reserveren via WhatsApp',install:'App installeren',
+    installed:'App geïnstalleerd op dit apparaat',menu:'Menu',events:'Evenementen',photos:"Foto's",
+    find:'Vind ons',featured:'In de kijker',
+    ribsText:'Onbeperkt spareribs. Eerste bord met garnituur, daarna onbeperkt ribs bijbestellen. Dranken niet inbegrepen.',
+    ask:'Reserveren / beschikbaarheid vragen →',belgianNight:'Belgische avond',
+    belgianDesc:'Hoofdgerecht + dessert + één glas wijn • € 24,90 • maximaal 30 personen.',
+    poolNight:'Biljarttoernooi',poolDesc:'Amerikaanse 8-Ball • de volgende datum wordt aangekondigd in de app en op onze sociale media.',
+    steakDesc:'Een betaalbare Steak Night is in voorbereiding.',photoTitle:'Enkele Black Horn-gerechten',
+    photoSkewer:'Surf & Turf-spies',photoSteak:'Gegrild rundvlees',ourMenu:'Onze kaart',menuTitle:'De Black Horn-kaart',
+    menuIntro:'De getoonde prijzen zijn de bevestigde prijzen. Artikelen zonder prijs blijven beschikbaar op de restaurantkaart.',
+    starters:'Voorgerechten & fingerfood',burgers:'Burgers',grill:'Gegrild vlees & hoofdgerechten',flame:'Op de vlam gegrild',
+    sides:'Bijgerechten',sidesText:'Frieten • gepofte aardappel • wedges',sauces:'Sauzen',
+    desserts:'Desserts & milkshakes',kids:'Kindermenu',kidsNuggets:'Nuggets • frieten • drankje',
+    kidsFish:'Vissticks • frieten • drankje',drinks:'Dranken',wineGlass:'Glas',wineBottle:'Fles',
+    bookingTitle:'Reservering',bookingHeadline:'Reserveer rechtstreeks bij ons',
+    bookingText:'WhatsApp opent een vooraf ingevuld bericht. Vul alleen het aantal personen, de datum en het uur in.',
+    visit:'Bezoek ons',monday:'Maandag',closed:'Gesloten',tueSun:'Dinsdag → zondag',
+    route:'Route via Google Maps',socialTitle:'Volg ons',coming:'Binnenkort',loyalty:'Black Horn Loyaliteit',
+    loyaltyText:'De digitale klantenkaart wordt in een latere update toegevoegd.',
+    home:'Home',findShort:'Adres',bookShort:'Reserveren'
   }
 };
 
 const messages = {
   fr:'Bonjour Black Horn, je voudrais réserver une table. Nombre de personnes : ___ / Date : ___ / Heure : ___.',
   es:'Hola Black Horn, quisiera reservar una mesa. Número de personas: ___ / Fecha: ___ / Hora: ___.',
-  en:'Hello Black Horn, I would like to book a table. Number of guests: ___ / Date: ___ / Time: ___.'
+  en:'Hello Black Horn, I would like to book a table. Number of guests: ___ / Date: ___ / Time: ___.',
+  nl:'Hallo Black Horn, ik wil graag een tafel reserveren. Aantal personen: ___ / Datum: ___ / Uur: ___.'
 };
 const ribsMessages = {
   fr:'Bonjour Black Horn, je voudrais réserver pour la Ribs Night à 22,90 €. Nombre de personnes : ___.',
   es:'Hola Black Horn, quisiera reservar para la Ribs Night de 22,90 €. Número de personas: ___.',
-  en:'Hello Black Horn, I would like to book the €22.90 Ribs Night. Number of guests: ___.'
+  en:'Hello Black Horn, I would like to book the €22.90 Ribs Night. Number of guests: ___.',
+  nl:'Hallo Black Horn, ik wil graag reserveren voor de Ribs Night van € 22,90 op 26 september. Aantal personen: ___.'
 };
 
 function waLink(text){ return 'https://wa.me/34747463333?text=' + encodeURIComponent(text); }
@@ -130,7 +154,8 @@ installBtn.addEventListener('click',async()=>{
   const msg={
     fr:'Sur iPhone/iPad : ouvrez cette page dans Safari → Partager → Ajouter à l’écran d’accueil.',
     es:'En iPhone/iPad: abre esta página en Safari → Compartir → Añadir a pantalla de inicio.',
-    en:'On iPhone/iPad: open this page in Safari → Share → Add to Home Screen.'
+    en:'On iPhone/iPad: open this page in Safari → Share → Add to Home Screen.',
+    nl:'Op iPhone/iPad: open deze pagina in Safari → Deel → Zet op beginscherm.'
   };
   alert(msg[lang] || msg.fr);
 });
