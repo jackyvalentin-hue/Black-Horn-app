@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "Black Horn Steak-Bar",
+  "short_name": "Black Horn",
+  "description": "Black Horn Steak-Bar — Pilar de la Horadada",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#090909",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "icon-192-v22.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512-v22.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
