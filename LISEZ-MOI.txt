@@ -1,0 +1,13 @@
+BLACK HORN V2.2 — MISE À JOUR CARTE
+
+Cette mise à jour ne change pas la version de l'application ni sa mise en page.
+Elle remplace uniquement le contenu de la carte par les informations des 6 pages fournies :
+- Entrées & Finger Food
+- Hamburgers
+- Plats principaux & viandes
+- Desserts
+- Milkshakes
+- Boissons
+
+À envoyer sur GitHub : index.html uniquement.
+Après déploiement, ouvrir le site dans Safari. Si l'ancienne carte reste affichée, ouvrir /reset.html une fois.
