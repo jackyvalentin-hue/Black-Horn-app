@@ -4,63 +4,218 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#111111">
-  <meta name="description" content="Black Horn Steak-Bar — grillades, burgers, événements et réservations à Pilar de la Horadada.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Black Horn">
+  <meta name="description" content="Black Horn Steak-Bar — carte, événements, réservation et itinéraire à Pilar de la Horadada.">
   <title>Black Horn Steak-Bar</title>
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
-  <link rel="icon" href="icons/icon-192.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest-v21.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192-v21.png">
+  <link rel="icon" href="icon-192-v21.png">
+  <link rel="stylesheet" href="styles-v21.css">
 </head>
 <body>
   <header class="hero" id="home">
-    <div class="topbar">
+    <div class="topbar" aria-label="Langue">
       <button class="lang active" data-lang="fr">FR</button>
       <button class="lang" data-lang="es">ES</button>
       <button class="lang" data-lang="en">EN</button>
     </div>
-    <img class="logo" src="assets/logo-black-horn.png" alt="Black Horn Steak-Bar">
+
+    <img class="logo" src="black-horn-logo-v21.png" alt="Black Horn Steak-Bar">
     <p class="tagline" data-i18n="tagline">Grillades • Burgers • Soirées</p>
+
     <div class="hero-actions">
-      <a class="btn btn-gold" href="https://wa.me/34747463333?text=Bonjour%20Black%20Horn%2C%20je%20voudrais%20r%C3%A9server%20une%20table." target="_blank" rel="noopener" data-i18n="book">Réserver sur WhatsApp</a>
+      <a class="btn btn-gold js-book" href="#" target="_blank" rel="noopener" data-i18n="book">Réserver sur WhatsApp</a>
       <button class="btn btn-outline" id="installBtn" data-i18n="install">Installer l’app</button>
     </div>
+    <p class="install-hint" id="installedHint" hidden data-i18n="installed">Application installée sur cet appareil</p>
   </header>
 
   <main>
     <section class="quick-grid" aria-label="Accès rapides">
       <a class="quick-card" href="#menu"><span>🥩</span><strong data-i18n="menu">Carte</strong></a>
       <a class="quick-card" href="#events"><span>🔥</span><strong data-i18n="events">Événements</strong></a>
+      <a class="quick-card" href="#photos"><span>📸</span><strong data-i18n="photos">Photos</strong></a>
       <a class="quick-card" href="#visit"><span>📍</span><strong data-i18n="find">Nous trouver</strong></a>
-      <a class="quick-card" href="#social"><span>⭐</span><strong data-i18n="follow">Nous suivre</strong></a>
     </section>
 
     <section class="panel highlight" id="events">
-      <p class="eyebrow" data-i18n="featured">À l’affiche</p>
-      <h2>RIBS NIGHT</h2>
-      <p class="big-price">22,90 €</p>
-      <p data-i18n="ribsText">Travers de porc à volonté. Première assiette avec garniture, puis réassort de ribs.</p>
-      <a class="text-link" href="https://wa.me/34747463333?text=Bonjour%20Black%20Horn%2C%20je%20voudrais%20des%20informations%20sur%20la%20Ribs%20Night." target="_blank" rel="noopener" data-i18n="ask">Demander les disponibilités →</a>
+      <div class="event-feature">
+        <div class="event-copy">
+          <p class="eyebrow" data-i18n="featured">À l’affiche</p>
+          <h2>RIBS NIGHT</h2>
+          <p class="big-price">22,90 €</p>
+          <p data-i18n="ribsText">Travers de porc à volonté. Première assiette avec garniture, puis réassort de ribs. Boissons non comprises.</p>
+          <a class="text-link js-ribs" href="#" target="_blank" rel="noopener" data-i18n="ask">Réserver / demander les disponibilités →</a>
+        </div>
+        <img src="ribs-night-v21.jpg" alt="Visuel promotionnel Ribs Night Black Horn" loading="lazy">
+      </div>
+
+      <div class="event-grid">
+        <article class="event-card">
+          <span class="event-icon">🇧🇪</span>
+          <div>
+            <h3 data-i18n="belgianNight">Soirée belge</h3>
+            <p data-i18n="belgianDesc">Plat + dessert + un verre de vin • 24,90 € • 30 personnes maximum.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <span class="event-icon">🎱</span>
+          <div>
+            <h3 data-i18n="poolNight">Tournoi de billard</h3>
+            <p data-i18n="poolDesc">8-Ball américain • prochaine date annoncée dans l’application et sur nos réseaux.</p>
+          </div>
+        </article>
+        <article class="event-card">
+          <span class="event-icon">🥩</span>
+          <div>
+            <h3>Steak Night</h3>
+            <p data-i18n="steakDesc">Une soirée steak à prix accessible est en préparation.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" id="photos">
+      <p class="eyebrow" data-i18n="photos">Photos</p>
+      <h2 data-i18n="photoTitle">Quelques assiettes Black Horn</h2>
+      <div class="photo-strip">
+        <figure>
+          <img src="photo-brochette-v21.jpg" alt="Brochette Terre-Mer Black Horn" loading="lazy">
+          <figcaption data-i18n="photoSkewer">Brochette Terre-Mer</figcaption>
+        </figure>
+        <figure>
+          <img src="photo-steak-v21.jpg" alt="Bœuf grillé Black Horn" loading="lazy">
+          <figcaption data-i18n="photoSteak">Bœuf grillé</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="panel" id="menu">
       <p class="eyebrow" data-i18n="ourMenu">Notre carte</p>
-      <h2 data-i18n="grillTitle">Le feu au centre de l’assiette</h2>
-      <div class="menu-list">
-        <article><div><h3>Entrecôte — vache espagnole</h3><p>300 g</p></div><strong>24,90 €</strong></article>
-        <article><div><h3>Entrecôte — qualité supérieure</h3><p>300 g</p></div><strong>27,90 €</strong></article>
-        <article><div><h3>Entrecôte Black Angus</h3><p>300 g</p></div><strong>32,90 €</strong></article>
-        <article><div><h3>Surf & Turf</h3><p data-i18n="flame">Grillé à la flamme</p></div><strong>29,90 €</strong></article>
-        <article><div><h3>Filet pur</h3><p>300 g</p></div><strong>27,90 €</strong></article>
-        <article><div><h3>T-Bone</h3><p data-i18n="flame">Grillé à la flamme</p></div><strong>39,90 €</strong></article>
-      </div>
-      <p class="note" data-i18n="menuNote">La carte complète sera ajoutée progressivement à l’application.</p>
+      <h2 data-i18n="menuTitle">La carte Black Horn</h2>
+      <p class="menu-intro" data-i18n="menuIntro">Les prix indiqués ci-dessous sont ceux déjà validés. Les articles sans prix restent disponibles sur la carte du restaurant.</p>
+
+      <details class="menu-category" open>
+        <summary><span>🔥</span><strong data-i18n="starters">Entrées & finger food</strong></summary>
+        <div class="menu-list">
+          <article><div><h3>Loaded Nachos</h3><p>Cheddar • tomate / cheddar • tomate</p></div></article>
+          <article><div><h3>Croquettes de rabo de toro</h3><p>Croquetas de rabo de toro / Oxtail croquettes</p></div></article>
+          <article><div><h3>Croquettes de jambon ibérique</h3><p>Croquetas de jamón ibérico / Iberian ham croquettes</p></div></article>
+          <article><div><h3>Buffalo Wings</h3><p>Ailes de poulet sauce Buffalo</p></div></article>
+          <article><div><h3>Ailes BBQ</h3><p>Alitas BBQ / BBQ wings</p></div></article>
+          <article><div><h3>Onion Rings</h3><p>Rondelles d’oignon croustillantes</p></div></article>
+          <article><div><h3>Mozzarella Sticks</h3><p>Bâtonnets de mozzarella panés</p></div></article>
+          <article><div><h3>Jalapeño Croquettes</h3><p>Petites croquettes fromage & jalapeño</p></div></article>
+          <article><div><h3>Gambas à l’ail</h3><p>6 pièces / 6 piezas / 6 pieces</p></div></article>
+          <article><div><h3>Salade méditerranéenne</h3><p>Salade • poivrons • oignon rouge • olives • concombre • feta</p></div></article>
+        </div>
+      </details>
+
+      <details class="menu-category">
+        <summary><span>🍔</span><strong data-i18n="burgers">Burgers</strong></summary>
+        <div class="menu-list">
+          <article><div><h3>Cheeseburger</h3><p>Black Angus 200 g</p></div></article>
+          <article><div><h3>Texas Chicken</h3><p>Poulet • sauce Texas</p></div></article>
+          <article><div><h3>Black Horn Burger</h3><p>Black Angus 200 g</p></div></article>
+          <article><div><h3>King Burger</h3><p>Black Angus 200 g</p></div></article>
+          <article><div><h3>Mexican Burger</h3><p>Black Angus 200 g • salade</p></div></article>
+          <article><div><h3>Jack Burger</h3><p>Black Angus 200 g</p></div></article>
+          <article><div><h3>Pulled Pork Burger</h3><p>Porc effiloché / Pulled pork</p></div></article>
+        </div>
+      </details>
+
+      <details class="menu-category">
+        <summary><span>🥩</span><strong data-i18n="grill">Viandes grillées & plats</strong></summary>
+        <div class="menu-list">
+          <article><div><h3>Côte de bœuf</h3><p>500–600 g</p></div></article>
+          <article><div><h3>Entrecôte — vache espagnole</h3><p>300 g</p></div><strong>24,90 €</strong></article>
+          <article><div><h3>Entrecôte — qualité supérieure</h3><p>300 g</p></div><strong>27,90 €</strong></article>
+          <article><div><h3>Entrecôte Black Angus</h3><p>300 g</p></div><strong>32,90 €</strong></article>
+          <article><div><h3>Picanha</h3><p>300 g</p></div></article>
+          <article><div><h3>Aguja de porc</h3><p>Échine de porc • 300 g</p></div><strong>19,90 €</strong></article>
+          <article><div><h3>Brochette de gambas</h3><p>8 pièces / 8 piezas / 8 pieces</p></div></article>
+          <article><div><h3>Brochette Terre-Mer</h3><p>Poulet • bacon • poivrons • gambas</p></div><strong>19,90 €</strong></article>
+          <article><div><h3>Brochette mixte</h3><p data-i18n="flame">Grillée à la flamme</p></div></article>
+          <article><div><h3>Surf & Turf</h3><p data-i18n="flame">Grillé à la flamme</p></div><strong>29,90 €</strong></article>
+          <article><div><h3>Filet pur</h3><p>300 g</p></div><strong>27,90 €</strong></article>
+          <article><div><h3>T-Bone</h3><p data-i18n="flame">Grillé à la flamme</p></div><strong>39,90 €</strong></article>
+          <article><div><h3>Travers de porc</h3><p>Costillas de cerdo / Pork ribs</p></div></article>
+          <article><div><h3>Fish & Chips</h3><p>Poisson pané • frites</p></div></article>
+        </div>
+        <div class="extras-box">
+          <strong data-i18n="sides">Accompagnements</strong>
+          <span data-i18n="sidesText">Frites • pomme de terre au four • wedges</span>
+        </div>
+        <div class="extras-box">
+          <strong data-i18n="sauces">Sauces</strong>
+          <span>Champignons • poivre • roquefort • BBQ • maison</span>
+          <b>2,50 €</b>
+        </div>
+      </details>
+
+      <details class="menu-category">
+        <summary><span>🍰</span><strong data-i18n="desserts">Desserts & milkshakes</strong></summary>
+        <div class="menu-list">
+          <article><div><h3>New York Cheesecake</h3></div><strong>6,90 €</strong></article>
+          <article><div><h3>Brownie</h3></div><strong>7,50 €</strong></article>
+          <article><div><h3>Apple Pie</h3></div><strong>6,90 €</strong></article>
+          <article><div><h3>Dame Blanche</h3></div><strong>6,90 €</strong></article>
+          <article><div><h3>Brésilienne</h3></div><strong>7,50 €</strong></article>
+          <article><div><h3>Coulant chocolat</h3><p>Chocolate coulant</p></div></article>
+          <article><div><h3>Milkshake Vanille / Chocolat / Fraise</h3></div><strong>5,90 €</strong></article>
+          <article><div><h3>Milkshake Memphis</h3><p>Lotus & Amaretto</p></div><strong>7,90 €</strong></article>
+          <article><div><h3>Milkshake Black Horn</h3><p>Brownie • noix de pécan • Jack</p></div><strong>7,90 €</strong></article>
+          <article><div><h3>Milkshake Spéculoos</h3></div></article>
+        </div>
+      </details>
+
+      <details class="menu-category">
+        <summary><span>🧒</span><strong data-i18n="kids">Menu enfant</strong></summary>
+        <div class="menu-list">
+          <article><div><h3>Nuggets</h3><p data-i18n="kidsNuggets">Nuggets • frites • boisson</p></div></article>
+          <article><div><h3>Fingers poisson</h3><p data-i18n="kidsFish">Fingers poisson • frites • boisson</p></div></article>
+        </div>
+      </details>
+
+      <details class="menu-category">
+        <summary><span>🍺</span><strong data-i18n="drinks">Boissons</strong></summary>
+        <div class="menu-list">
+          <article><div><h3>Mahou Clásica pression</h3><p>25 cl</p></div><strong>2,80 €</strong></article>
+          <article><div><h3>Mahou Clásica pression</h3><p>50 cl</p></div><strong>4,50 €</strong></article>
+          <article><div><h3>Mahou IPA</h3></div><strong>4,20 €</strong></article>
+          <article><div><h3>Mahou 0,0</h3></div><strong>3,50 €</strong></article>
+          <article><div><h3>Budweiser</h3></div><strong>3,90 €</strong></article>
+          <article><div><h3>Corona</h3></div><strong>4,50 €</strong></article>
+          <article><div><h3>Leffe Blonde</h3></div><strong>5,20 €</strong></article>
+          <article><div><h3>Softs</h3><p>Coca-Cola • Zero • Fanta • Sprite • Dr Pepper • Nestea • Tonic</p></div><strong>2,80 €</strong></article>
+          <article><div><h3>Jus</h3><p>Orange • ananas • pomme • pêche</p></div><strong>3,00 €</strong></article>
+          <article><div><h3>Vin maison</h3><p data-i18n="wineGlass">Verre</p></div><strong>2,80 €</strong></article>
+          <article><div><h3>Vin maison</h3><p data-i18n="wineBottle">Bouteille</p></div><strong>12,00 €</strong></article>
+          <article><div><h3>Tinto de Verano</h3></div></article>
+          <article><div><h3>Spiritueux & digestifs</h3><p>Bacardi • Barceló Imperial • Larios • Larios Rosé • Licor 43 • Brandy • Cointreau</p></div></article>
+          <article><div><h3>Eaux</h3><p>Gazeuse 33 cl • grande 75 cl</p></div></article>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel booking-panel" id="booking">
+      <p class="eyebrow" data-i18n="bookingTitle">Réservation</p>
+      <h2 data-i18n="bookingHeadline">Réservez directement avec nous</h2>
+      <p data-i18n="bookingText">WhatsApp ouvre un message prérempli. Indiquez simplement le nombre de personnes, la date et l’heure.</p>
+      <a class="btn btn-gold js-book" href="#" target="_blank" rel="noopener" data-i18n="book">Réserver sur WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+34747463333">+34 747 463 333</a>
     </section>
 
     <section class="panel" id="visit">
       <p class="eyebrow" data-i18n="visit">Nous rendre visite</p>
       <h2>Black Horn Steak-Bar</h2>
       <p>Calle Zaragoza 12<br>03190 Pilar de la Horadada, Alicante</p>
-      <p><strong data-i18n="hours">Horaires :</strong> <span data-i18n="hoursText">mardi à dimanche • 18:00–23:00</span></p>
+      <div class="hours-card">
+        <div><span data-i18n="monday">Lundi</span><strong data-i18n="closed">Fermé</strong></div>
+        <div><span data-i18n="tueSun">Mardi → dimanche</span><strong>18:00–23:00</strong></div>
+      </div>
       <div class="stack-actions">
         <a class="btn btn-gold" href="https://maps.app.goo.gl/LjgLt8MfumfdYNus9?g_st=ic" target="_blank" rel="noopener" data-i18n="route">Itinéraire Google Maps</a>
         <a class="btn btn-outline" href="tel:+34747463333">+34 747 463 333</a>
@@ -71,27 +226,28 @@
       <p class="eyebrow">Black Horn Online</p>
       <h2 data-i18n="socialTitle">Suivez-nous</h2>
       <div class="social-grid">
-        <a href="https://www.facebook.com/61590589595842/" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.instagram.com/blackhornsteakbar/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://maps.app.goo.gl/LjgLt8MfumfdYNus9?g_st=ic" target="_blank" rel="noopener">Google</a>
+        <a href="https://www.facebook.com/61590589595842/" target="_blank" rel="noopener"><span>f</span>Facebook</a>
+        <a href="https://www.instagram.com/blackhornsteakbar/" target="_blank" rel="noopener"><span>◎</span>Instagram</a>
+        <a href="https://maps.app.goo.gl/LjgLt8MfumfdYNus9?g_st=ic" target="_blank" rel="noopener"><span>★</span>Google</a>
       </div>
     </section>
 
     <section class="panel loyalty">
-      <p class="eyebrow" data-i18n="coming">Prochaine étape</p>
+      <p class="eyebrow" data-i18n="coming">À venir</p>
       <h2 data-i18n="loyalty">Fidélité Black Horn</h2>
-      <p data-i18n="loyaltyText">La carte de fidélité numérique sera ajoutée après validation de la règle de récompense.</p>
+      <p data-i18n="loyaltyText">La carte de fidélité numérique sera ajoutée dans une prochaine mise à jour.</p>
     </section>
   </main>
 
-  <nav class="bottom-nav">
+  <nav class="bottom-nav" aria-label="Navigation principale">
     <a href="#home">⌂<span data-i18n="home">Accueil</span></a>
     <a href="#menu">☰<span data-i18n="menu">Carte</span></a>
     <a href="#events">★<span data-i18n="events">Événements</span></a>
-    <a href="https://wa.me/34747463333?text=Bonjour%20Black%20Horn%2C%20je%20voudrais%20r%C3%A9server%20une%20table." target="_blank" rel="noopener">✆<span data-i18n="bookShort">Réserver</span></a>
+    <a href="#visit">⌖<span data-i18n="findShort">Adresse</span></a>
+    <a class="js-book" href="#" target="_blank" rel="noopener">✆<span data-i18n="bookShort">Réserver</span></a>
   </nav>
 
-  <footer>© <span id="year"></span> Black Horn Steak-Bar</footer>
-  <script src="app.js"></script>
+  <footer>© <span id="year"></span> Black Horn Steak-Bar • V2.1</footer>
+  <script src="app-v21.js"></script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mise à jour Black Horn</title>
+<style>
+body{margin:0;background:#0b0b0b;color:#f4e7c1;font-family:system-ui,-apple-system,sans-serif;
+display:grid;place-items:center;min-height:100vh;text-align:center;padding:24px}
+.card{max-width:520px;border:1px solid #6c542d;border-radius:18px;padding:28px;background:#15120e}
+h1{margin-top:0;color:#f0c867} p{color:#d2c5aa}.spin{font-size:34px}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="spin">⟳</div>
+<h1>Mise à jour Black Horn</h1>
+<p>Nettoyage de l’ancienne version…</p>
+</div>
+<script>
+(async()=>{
+  try{
+    if('serviceWorker' in navigator){
+      const regs=await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map(r=>r.unregister()));
+    }
+    if('caches' in window){
+      const keys=await caches.keys();
+      await Promise.all(keys.map(k=>caches.delete(k)));
+    }
+  }catch(e){}
+  setTimeout(()=>location.replace('./index.html?v=21'),700);
+})();
+</script>
+</body>
+</html>
